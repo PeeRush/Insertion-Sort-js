@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Insertion Sort</title>
+</head>
+<body>
+    <!DOCTYPE html>
+<html>
+<head>
+    <title>Insertion Sort</title>
+</head>
+<body>
+
+<script>
+function insertionSort(arr) {
+    for (let i = 1; i < arr.length; i++) {
+        let current = arr[i];
+        let j = i - 1;
+        while ((j > -1) && (current < arr[j])) {
+            arr[j + 1] = arr[j];
+            j--;
+        }
+        arr[j + 1] = current;
+    }
+    return arr;
+}
+
+let array = [12, 11, 13, 5, 6];
+console.log("Unsorted Array: " + array);
+insertionSort(array);
+console.log("Sorted Array: " + array);
+</script>
+
+    <script src="sortings.js"></script>
+</body>
+</html>
